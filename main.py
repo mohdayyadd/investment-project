@@ -12,7 +12,7 @@ load_dotenv()
 # === CONFIGURATION ===
 blob_connection_string = os.getenv("blob_connection_string")
 input_container_name = os.getenv("doc_container_name")
-output_container_name = os.getenv("json_container_name")  # name of output container in Blob Storage
+output_container_name = os.getenv("parsed_container_name")  # name of output container in Blob Storage
 
 endpoint = os.getenv("endpoint")
 key = os.getenv("key")
