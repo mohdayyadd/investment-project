@@ -6,7 +6,7 @@ st.set_page_config(page_title="Manual Review", layout="centered")
 st.title("👀 Manual Review")
 
 st.markdown("""
-Below are extracted entities with confidence < 95%.
+Below are extracted entities with confidence < 90%.
 You can approve or update each one.
 """)
 
@@ -18,7 +18,7 @@ if not os.path.exists(entities_path):
 
 # Load data
 df = pd.read_csv(entities_path)
-low_conf_df = df[df["Confidence"] < 0.95]
+low_conf_df = df[df["Confidence"] < 0.90]
 
 if low_conf_df.empty:
     st.success("✅ All entities meet the confidence threshold. Nothing to review.")
